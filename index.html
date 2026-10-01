@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Robert's Games — a clean, modern place to play.">
+  <title>Robert's Games</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (() => {
+      const theme = localStorage.getItem("siteTheme") || "dark";
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Robert's Games home">
+      <span class="brand-mark">R</span>
+      <span>Robert's <b>Games</b></span>
+    </a>
+
+    <nav class="nav">
+      <a class="active" href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a href="extra-sites.html">Extra Sites</a>
+    </nav>
+
+    <a class="nav-button" href="games.html">
+      Play now <span>→</span>
+    </a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> YOUR GAME ROOM</div>
+        <h1>Take a break.<br><em>Play something.</em></h1>
+        <p class="hero-text">
+          A simple place to find something fun to play without all the clutter.
+          Pick a game and get straight into it.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-button" href="games.html">Browse games <span>↗</span></a>
+          <a class="secondary-button" href="#featured">See what's here</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="card-top">
+          <span>FEATURED</span>
+          <span class="status"><i></i> Ready to play</span>
+        </div>
+        <div class="game-art">
+          <div class="art-grid"></div>
+          <div class="controller">⌁</div>
+          <div class="art-title">GAME<br>TIME</div>
+        </div>
+        <div class="featured-bottom">
+          <div>
+            <small>START PLAYING</small>
+            <strong>Jump into the collection</strong>
+          </div>
+          <a href="games.html" aria-label="Open games">→</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>01</strong><span>Open the library</span></div>
+      <div><strong>02</strong><span>Pick a game</span></div>
+      <div><strong>03</strong><span>Have some fun</span></div>
+    </section>
+
+    <section id="featured" class="section">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow"><span></span> EXPLORE</div>
+          <h2>Something for every mood.</h2>
+        </div>
+        <a href="games.html" class="text-link">View all games →</a>
+      </div>
+
+      <div class="category-grid">
+        <a class="category-card" href="games.html">
+          <span class="category-number">01</span>
+          <div class="category-icon">⌁</div>
+          <h3>Arcade</h3>
+          <p>Quick games for a quick break.</p>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="category-card" href="games.html">
+          <span class="category-number">02</span>
+          <div class="category-icon">◇</div>
+          <h3>Strategy</h3>
+          <p>Slow down and think your way through.</p>
+          <span class="arrow">↗</span>
+        </a>
+        <a class="category-card" href="games.html">
+          <span class="category-number">03</span>
+          <div class="category-icon">+</div>
+          <h3>Classics</h3>
+          <p>Games that never really get old.</p>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+
+    <section class="section extra-section">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow"><span></span> EXTRA SITES</div>
+          <h2>A few more places to check out.</h2>
+        </div>
+        <a href="extra-sites.html" class="text-link">Open full list →</a>
+      </div>
+
+      <div class="site-strip">
+        <a class="site-mini" href="extra-sites.html">
+          <span>FLARE</span><strong>22 sites</strong><b>→</b>
+        </a>
+        <a class="site-mini" href="extra-sites.html">
+          <span>🍓 STROBERRI</span><strong>5 more sites</strong><b>→</b>
+        </a>
+      </div>
+    </section>
+
+    <section class="callout">
+      <div>
+        <div class="eyebrow"><span></span> READY?</div>
+        <h2>Stop scrolling.<br>Start playing.</h2>
+      </div>
+      <a class="primary-button" href="games.html">Open the games <span>→</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Robert's Games</span>
+    <span>Made for a good break.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

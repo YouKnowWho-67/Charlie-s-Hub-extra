@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Robert's Games — game library.">
+  <title>Games — Robert's Games</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (() => {
+      const theme = localStorage.getItem("siteTheme") || "dark";
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <style>
+    .games-page {
+      min-height: calc(100vh - 76px);
+      display: flex;
+      flex-direction: column;
+    }
+    .games-head {
+      width: min(1184px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 55px 0 25px;
+    }
+    .games-head h1 {
+      font-size: clamp(42px, 6vw, 70px);
+      margin-bottom: 12px;
+    }
+    .games-head p {
+      color: var(--muted);
+      margin: 0;
+      max-width: 560px;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+    .game-frame-wrap {
+      width: min(1184px, calc(100% - 40px));
+      margin: 10px auto 60px;
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--panel);
+      box-shadow: 0 25px 70px rgba(0,0,0,.25);
+      flex: 1;
+    }
+    .game-frame {
+      display: block;
+      width: 100%;
+      min-height: 760px;
+      height: calc(100vh - 235px);
+      border: 0;
+      border-radius: 14px;
+      background: #090a0c;
+    }
+    .back-row {
+      width: min(1184px, calc(100% - 40px));
+      margin: 0 auto;
+      padding-bottom: 35px;
+    }
+    .back-row a {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .back-row a:hover { color: var(--text); }
+    @media (max-width: 700px) {
+      .game-frame { min-height: 650px; height: 75vh; }
+      .games-head { padding-top: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">R</span>
+      <span>Robert's <b>Games</b></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a class="active" href="games.html">Games</a>
+    </nav>
+    <a class="nav-button" href="index.html">Home <span>↗</span></a>
+  </header>
+
+  <main class="games-page">
+    <section class="games-head">
+      <div class="eyebrow"><span></span> GAME LIBRARY</div>
+      <h1>Pick something.</h1>
+      <p>Your game collection is below. Choose a game and get right into it.</p>
+    </section>
+
+    <section class="game-frame-wrap" aria-label="Game library">
+      <iframe
+        class="game-frame"
+        src="https://thatoneguy-67.github.io/Games/"
+        title="Robert's Games"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <div class="back-row">
+      <a href="index.html">← Back to home</a>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
